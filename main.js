@@ -41,6 +41,9 @@ app.get('/contact_input', (req, res) =>{
 	</form>`, 'Contact Input page'))
 })
 
+app.post('/forum_sumbit', (/contact_input, res) =>{
+   
+
 app.get('/example/with/title', (req, res) => {
   res.send(page_template('This is an example page.', 'This is an example title'))
 })
