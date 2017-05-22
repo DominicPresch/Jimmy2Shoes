@@ -1,4 +1,4 @@
-module.exports = () => `<div class="contact">
+module.exports = (contact) => `<div class="contact">
     <div class="contact-fname">${contact.fname}</div>
     <div class="contact-lname">${contact.lname}</div>
     <div class="contact-address">${contact.address}</div>
