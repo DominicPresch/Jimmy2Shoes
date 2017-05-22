@@ -1,4 +1,3 @@
-const path = require('path')
 const express = require('express')
 const app = express()
 const port = 8080
@@ -25,10 +24,6 @@ app.get('/', (req, res) => {
     res.send('Hello World!')
 })
 
-app.get('/contact', (req, res) => {
-    res.send(page_template(contact_template(test_user), 'Contact page'))
-})
-
 app.get('/contact_input', (req, res) =>{
     res.send(page_template(`<form action="/form_submit" method="POST">
         <label for="fname">First name:</label>
@@ -50,6 +45,9 @@ app.get('/contact_input', (req, res) =>{
 app.post('/form_submit', (req, res) =>{
     console.log(req.body)
     res.send('Success!')
+    app.get('/contact', (req, res) => {
+	res.send(page_template(contact_template(req.body), 'Contact page'))
+    })
 })
 
 app.get('/example/with/title', (req, res) => {
