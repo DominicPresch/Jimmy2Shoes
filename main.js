@@ -44,10 +44,7 @@ app.get('/contact_input', (req, res) =>{
 
 app.post('/form_submit', (req, res) =>{
     console.log(req.body)
-    res.send('Success!')
-    app.get('/contact', (req, res) => {
 	res.send(page_template(contact_template(req.body), 'Contact page'))
-    })
 })
 
 app.get('/example/with/title', (req, res) => {
