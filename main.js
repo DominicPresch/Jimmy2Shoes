@@ -30,7 +30,7 @@ app.get('/contact', (req, res) => {
 })
 
 app.get('/contact_input', (req, res) =>{
-    res.send(page_template(`<form>
+    res.send(page_template(`<form action="/form_submit">
         <label for="fname">First name:</label>
         <input type="text" id="fname" name="fname">
         <label for="lname">Last name:</label>
@@ -47,13 +47,14 @@ app.get('/contact_input', (req, res) =>{
         </form>`, 'Contact Input page'))
 })
 
-app.post('/forum_sumbit', (/contact_input, res) =>{
+app.post('/form_submit', (req, res) =>{
+    
+})
 
+app.get('/example/with/title', (req, res) => {
+    res.send(page_template('This is an example page.', 'This is an example title'))
+})
 
-    app.get('/example/with/title', (req, res) => {
-        res.send(page_template('This is an example page.', 'This is an example title'))
-    })
-
-    app.listen(port, () => {
-        console.log(`Server started listening on http://localhost:${port}`)
-    })
+app.listen(port, () => {
+    console.log(`Server started listening on http://localhost:${port}`)
+})
