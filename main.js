@@ -30,7 +30,7 @@ app.get('/contact', (req, res) => {
 })
 
 app.get('/contact_input', (req, res) =>{
-    res.send(page_template(`<form action="/form_submit">
+    res.send(page_template(`<form action="/form_submit" method="POST">
         <label for="fname">First name:</label>
         <input type="text" id="fname" name="fname">
         <label for="lname">Last name:</label>
@@ -48,7 +48,8 @@ app.get('/contact_input', (req, res) =>{
 })
 
 app.post('/form_submit', (req, res) =>{
-    
+    console.log(req.body)
+    res.send('Success!')
 })
 
 app.get('/example/with/title', (req, res) => {
