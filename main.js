@@ -33,7 +33,7 @@ app.get('/contact_input', (req, res) =>{
         <input type="text" id="lname" name="lname">
         <label for="adress">Address:</label>
         <input type="text" id="address" name="address">
-        <label for="phone">Phone Number:</label>
+        <label style="color:red;" for="phone">Phone Number:</label>
         <input type="text" id="phone" name="phone">
         <label for="bday">Birthday:</label>
         <input type="text" id="bday" name="bday">
@@ -44,8 +44,12 @@ app.get('/contact_input', (req, res) =>{
 })
 
 app.post('/form_submit', (req, res) =>{
-    console.log(req.body)
-	res.send(page_template(contact_template(req.body), 'Contact page'))
+    console.log(req.body)	
+	if(/(^\d{3}-\d{3}-\d{4}$)|(^\d{10}$)/.test(req.body.phone)){
+		res.send(page_template(contact_template(req.body), 'Contact page'))
+	}else{
+		res.redirect('/contact_input?phone=error')
+	}
 })
 
 app.get('/example/with/title', (req, res) => {
