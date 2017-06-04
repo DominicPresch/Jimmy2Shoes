@@ -39,7 +39,7 @@ app.get('/contact_input', (req, res) =>{
         <input type="text" id="bday" name="bday">
         <label for="notes">Notes:</label>
         <input type="text" id="notes" name="notes">
-        <input type="submit">Submit!</input>		
+        <input type="submit"/>
         </form>`, 'Contact Input page'))
 })
 
