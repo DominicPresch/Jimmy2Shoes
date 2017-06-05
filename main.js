@@ -31,7 +31,7 @@ app.get('/contact_input', (req, res) =>{
         <input type="text" id="fname" name="fname">
         <label for="lname">Last name:</label>
         <input type="text" id="lname" name="lname">
-        <label for="adress">Address:</label>
+        <label for="address">Address:</label>
         <input type="text" id="address" name="address">
         <label style="color:red;" for="phone">Phone Number:</label>
         <input type="text" id="phone" name="phone">

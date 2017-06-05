@@ -1,0 +1,15 @@
+var sqlite3 = require('sqlite3').verbose();
+var db = new sqlite3.Database('contact.db');
+db.serialize(function(){
+    db.run("CREATE TABLE DATABASE (info TEXT)");
+    var stmt = db.prepare("INSERT INTO DATABASE VALUES (?)");
+    for(var i = 0; i < 10; i++){
+      stmt.run("ContactID " + i);
+    }
+    stmt.finalize();
+    db.each("SELECT rowid AS id, info FROM DATABASE", function(err, row) {
+        console.log(row.id + ": " + row.info);
+    });
+});
+
+db.close();
