@@ -1,7 +1,7 @@
 {
   "name": "jimmy2shoes",
   "version": "0.0.1",
-  "description": "This is an exploration into how to make a web application with Node.js",
+  "description": "This is an exploration into how to make a web application with Node.js and databases",
   "main": "main.js",
   "scripts": {
     "start": "node main.js",
