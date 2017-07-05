@@ -1,3 +1,5 @@
+//Need to add front end style and more detail and clean up some of this spagetti
+
 const express = require('express')
 const path = require('path')
 const app = express()

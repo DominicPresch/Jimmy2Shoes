@@ -1,4 +1,5 @@
 # Jimmy2Shoes
+This is not a complete project, currently working on Databases.
 ## Motivation
 This is an exploration into how to make a web application with Node.js
 ## Installation and Running

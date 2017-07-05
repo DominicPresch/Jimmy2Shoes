@@ -1,3 +1,4 @@
+//Basic setup before adding more options
 module.exports = (contact) => `<div class="contact">
     <div class="contact-fname">${contact.fname}</div>
     <div class="contact-lname">${contact.lname}</div>
