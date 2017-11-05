@@ -28,6 +28,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/contact_input', (req, res) =>{
+	
     res.send(page_template(`<form action="/form_submit" method="POST">
         <label for="fname">First name:</label>
         <input type="text" id="fname" name="fname">
@@ -42,8 +43,15 @@ app.get('/contact_input', (req, res) =>{
         <label for="notes">Notes:</label>
         <input type="text" id="notes" name="notes">
         <input type="submit"/>
-        </form>`, 'Contact Input page'))
+        </form>
+	<script>
+		let mystring = fname;
+		sqlfunc(
+		let result = sqlfunc(mystring);
+	</script>
+	`, 'Contact Input page'))
 })
+
 
 app.post('/form_submit', (req, res) =>{
     console.log(req.body)	
